@@ -1,2 +1,0 @@
-# AngularDotnet
-first tutorial

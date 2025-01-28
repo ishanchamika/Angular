@@ -1,0 +1,114 @@
+/* General styles for the content container */
+.content {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* Section nav styling */
+section nav {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Input field styling */
+input {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+.flex-column input {
+    width: calc(100% - 10px);
+}
+
+/* Radio buttons styling */
+.radio {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.radio input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Buttons styling */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.secondary {
+    background-color: #ddd;
+    color: #333;
+}
+
+button.secondary:hover {
+    background-color: #bbb;
+}
+
+button.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+button.primary:hover {
+    background-color: #0056b3;
+}
+
+span{
+    color: red;
+    margin-left: 7px;
+}

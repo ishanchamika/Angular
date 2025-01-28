@@ -1,0 +1,9 @@
+.image-container img {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Make height equal to width for a perfect circle */
+    border-radius: 50%; 
+    object-fit: cover; /* Ensures the image is cropped properly if it’s not square */
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto; /* Center the image if needed */
+  }
+  

@@ -1,0 +1,65 @@
+<div class="content">
+    <h1>Edit Contact</h1>
+    <form class="content" [formGroup]="registerForm" (ngSubmit)="submitData()">
+        <section>
+            <nav>Name/Info</nav>
+            <div>
+                <div>
+                    <input type="text" formControlName="name" class="form-control" placeholder="Full Name">
+                    <div *ngIf="nameV.invalid && (nameV.touched || nameV.dirty)">
+                        <span class="error" *ngIf="nameV.errors?.required">Name is required</span>
+                        <span class="error" *ngIf="nameV.errors?.pattern">Enter valid Name</span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="text" formControlName="email" class="form-control" placeholder="Email">
+                    <div *ngIf="emailV.invalid && (emailV.touched || emailV.dirty)">
+                        <span class="error" *ngIf="emailV.errors?.required">Email is required</span>
+                        <span class="error" *ngIf="emailV.errors?.email">Enter valid Email</span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="text" formControlName="phone" class="form-control" placeholder="Mobile">
+                    <div *ngIf="phoneV.invalid && (phoneV.touched || phoneV.dirty)">
+                        <span class="error" *ngIf="phoneV.errors?.required">Phone is required</span>
+                        <span class="error" *ngIf="phoneV.errors?.pattern">Enter valid Mobile Number</span>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="text" formControlName="salary" class="form-control" placeholder="Salary">
+                    <div *ngIf="salaryV.invalid && (salaryV.touched || salaryV.dirty)">
+                        <span class="error" *ngIf="salaryV.errors?.required">Salry is required</span>
+                        <span class="error" *ngIf="salaryV.errors?.pattern">Enter valid salary</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <nav>Phone</nav>
+            <div class="flex-column">
+                <input placeholder="Phone" />
+            </div>
+            <div class="radio">
+                <input type="radio" value="mobile">Mobile
+                <input type="radio" value="work">Work
+                <input type="radio" value="other">Other
+            </div>
+        </section>
+
+        <section>
+            <div class="buttons">
+                <button class="secondary">Cancel</button>
+                <button class="primary" [disabled]="registerForm.invalid">Save</button>
+            </div>
+        </section>
+    </form>
+
+    <!-- <div class="buttons">
+        <button class="secondary">Cancel</button>
+        <button class="primary" [disabled]="registerForm.invalid">Save</button>
+    </div> -->
+</div>

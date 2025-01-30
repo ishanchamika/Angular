@@ -23,7 +23,11 @@ export class ApiserviceService {
   login(data:any):Observable<any>
   {
     const response = this.Http.post(`${this.apiUrl}/Signup/login`, data);
-    console.log('kkkk', response);
+    return response;
+  }
+  getAllEmployees()
+  {
+    const response = this.Http.get(`${this.apiUrl}/Employee`);
     return response;
   }
 }

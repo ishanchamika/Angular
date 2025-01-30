@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,23 @@ import { Component } from '@angular/core';
   standalone: false,
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit
+{
+  constructor(private router:Router){}
   title = 'general';
+
+  ngOnInit(): void 
+  {
+    
+  }
+  logout() 
+  {
+    if(window.confirm("Confirm Logout")) 
+    {
+      localStorage.clear();
+      this.router.navigate(['/login']);
+    }
+  }
+  
+  
 }

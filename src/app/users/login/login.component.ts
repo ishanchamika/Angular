@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit
           const res = await firstValueFrom(this.service.login(this.LoginForm.value));
           if(res.status === true && res.token)
           {
-            console.log(res);
+            localStorage.setItem('auth_token', res.token);
             this.errmsgshow = false;
             window.alert(res.message);
             this.router.navigate(['home']);

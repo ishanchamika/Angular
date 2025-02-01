@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit
       const res = await firstValueFrom(this.service.getAllEmployees());
       if(res)
       {
-        console.log(res.data);
+        console.log(res);
       }
       else
       {
